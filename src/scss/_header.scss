@@ -1,0 +1,39 @@
+@import 'mixins';
+@import 'vars';
+
+.header {
+  &__bottom {
+    @extend %flex-center;
+  }
+
+  &__sotial-list {
+    @extend %flex-center;
+  }
+
+  &__sotial-svg {
+    width: 43.85px;
+    height: 43.85px;
+  }
+}
+
+.nav {
+  &__list {
+    @extend %flex-center;
+  }
+
+  &__home-svg {
+    width: 23px;
+    height: 22px;
+  }
+}
+
+.burger {
+  display: none;
+}
+
+.feedback-form {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  @include hide();
+}

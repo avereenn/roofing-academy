@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Академия кровли</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="header container">
+    <div id="headerMenu" class="header__menu">
+      <nav class="header__nav nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="#" aria-label="главная страница">
+              <svg class="nav__home-svg">
+                <use xlink:href="images/sprite.svg#home" />
+              </svg>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">
+              Каталог
+            </a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">
+              Преимущества
+            </a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">
+              Примеры работ
+            </a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">
+              Монтаж
+            </a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">
+              Отзывы
+            </a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">
+              Ответы на вопросы
+            </a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">
+              Контакты
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__bottom">
+      <div class="header__info">
+        <span>
+          <b>Кровельные и фасадные материалы</b> в Тюмени и области.
+        </span>
+        Профессиональный монтаж с 2010 года.
+      </div>
+      <span class="header__pdf">
+        <a class="header__pdf-link pdf-link" href="#" download>
+          <span class="pdf-link__icon">pdf</span>
+          <span class="pdf-link__text">Скачать прайс-каталог</span>
+        </a>
+      </span>
+      <h1 class="header__title">
+        <img class="header__title-img" src="images/logo.webp" alt="академия кровли">
+      </h1>
+      <button class="header__burger burger" type="button" aria-label="открыть меню" aria-controls="headerMenu"
+        aria-expanded="false">
+        <span class="burger__line"></span>
+      </button>
+      <div class="header__sotial">
+        <span class="header__sotial-label">Отвечаем <b>онлайн</b></span>
+        <ul class="header__sotial-list">
+          <li class="header__sotial-item">
+            <a class="header__sotial-link" href="viber://chat?number=79999999999" aria-label="связаться через вайбер">
+              <svg class="header__sotial-svg">
+                <use xlink:href="images/sprite.svg#viber" />
+              </svg>
+            </a>
+          </li>
+          <li class="header__sotial-item">
+            <a class="header__sotial-link" href="whatsapp://send?phone=+79999999999"
+              aria-label="связаться через вотсап">
+              <svg class="header__sotial-svg">
+                <use xlink:href="images/sprite.svg#whatsapp" />
+              </svg>
+            </a>
+          </li>
+          <li class="header__sotial-item">
+            <a class="header__sotial-link" href="tg://resolve?domain=udawww" aria-label="связаться через телеграмм">
+              <svg class="header__sotial-svg">
+                <use xlink:href="images/sprite.svg#tg" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="header__contact-info contact-info">
+        <div class="contact-info__mode">
+          <b>Пн-Пт</b> 9:00 - 18:00 <b>Сб</b> 10:00 - 18:00
+        </div>
+        <a class="contact-info__tel-link" href="tel:+7800225460">8&nbsp;(800)&nbsp;225-54-60</a>
+        <a class="contact-info__feedback-link" href="#feedbackForm">Позвоните мне</a>
+        <form id="feedbackForm" class="contact-info__feedback-form feedback-form" name="feedbackForm" action="#">
+          <h2 class="feedback-form__title">
+            Быстро оставить заявку
+          </h2>
+          <div class="feedback-form__text">
+            Введите номер, мы позвоним вам в течение 10 минут в рабочее время
+            <span class="feedback-form__mode">
+              Пн–Пт 9:00 - 18:00, Сб 10:00 - 18:00
+            </span>
+          </div>
+          <label class="feedback-form__label">
+            Введите номер телефона
+            <input type="phone" name="phone-number">
+          </label>
+          <button class="feedback-form__submit" type="submit">
+            Позвоните мне
+            <svg>
+              <use xlink:href="images/sprite.svg#arrow" />
+            </svg>
+          </button>
+          <input class="feedback-form__checkbox" type="checkbox" name="policy-confirm" id="policy-confirm">
+          <label for="policy-confirm">
+            Нажимая кнопку вы соглашаетесь с условиями
+            <a class="feedback-form__policy-link" href="#">Политики конфиденциальности</a>
+          </label>
+        </form>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <section class="hero">
+      <div id="bullets" class="hero__bullets bullets">
+        <ul class="bullets__list">
+          <li class="bullets__item">
+            <b>Гарантия от 50 лет</b> на материалыи 5 лет на монтаж
+          </li>
+          <li class="bullets__item">
+            <b>Замер, монтажнный проект</b> и еще 4 услуги бесплатно
+          </li>
+          <li class="bullets__item">
+            <b>Сметы точны</b> до копейки
+          </li>
+          <li class="bullets__item">
+            <b>Поэтапная оплата,</b> кредит или рассрочка
+          </li>
+          <li class="bullets__item">
+            <b>Наши крыши в каждом поселке</b> и дачном сообществе региона
+          </li>
+        </ul>
+        <button class="hero__bullets-btn" aria-label="показать все преимущества" aria-controls="bullets"
+          aria-expanded="false"></button>
+      </div>
+      <div class="hero__info">
+        <h2 class="hero__title">
+          Продажа <b>кровельных материалов</b> в Тюмени и Тюменской области
+        </h2>
+        <div class="hero__title-note">
+          <svg class="hero__title-note-svg">
+            <use xlink:href="images/sprite.svg#circles" />
+          </svg>
+          и монтаж под ключ
+        </div>
+        <div class="hero__info-links">
+          <a class="hero__info-link" href="#">
+            Рассчитать стоимость материалов и монтажа
+            <svg class="hero__info-link-svg">
+              <use xlink:href="images/sprite.svg#arrow" />
+            </svg>
+          </a>
+          <a class="hero__info-link" href="#">
+            Записаться на просмотр объектов
+            <svg class="hero__info-link-svg">
+              <use xlink:href="images/sprite.svg#arrow" />
+            </svg>
+          </a>
+        </div>
+        <div class="hero__info-note">
+          <svg class="hero__info-note-svg">
+            <use xlink:href="images/sprite.svg#cursor" />
+          </svg>
+          Ответьте на несколько вопросов и получите сметную стоимость и 3 подарка за экономию нашего времени
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

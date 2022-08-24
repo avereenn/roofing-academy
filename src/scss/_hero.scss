@@ -1,0 +1,31 @@
+.hero {
+  @extend %flex-center;
+
+  &__bullets-btn {
+    display: none;
+  }
+
+  &__title-note-svg {
+    width: 58px;
+    height: 9.21px;
+  }
+
+  &__info-links,
+  &__info-link {
+    @extend %flex-center;
+  }
+
+  &__info-link-svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__info-note {
+    @extend %flex-center;
+  }
+
+  &__info-note-svg {
+    width: 26px;
+    height: 20.29px;
+  }
+}

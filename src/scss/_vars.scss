@@ -1,0 +1,22 @@
+%flex-center {
+  display: flex;
+  align-items: center;
+}
+
+%reset-list-style {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+%reset-link-style {
+  color: inherit;
+  text-decoration: none;
+}
+
+%reset-btn-styles {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
