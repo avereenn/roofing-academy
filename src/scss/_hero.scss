@@ -1,8 +1,31 @@
 .hero {
   @extend %flex-center;
+  padding-bottom: 151.5px;
+
+  &__bullets {
+    width: 11.7vw;
+    margin-right: 3.7vw;
+    padding: 42px 30px;
+    text-align: center;
+    background-color: #fff;
+  }
 
   &__bullets-btn {
     display: none;
+  }
+
+  &__title {
+    max-width: 33.6vw;
+    margin-bottom: 19px;
+    font-size: 55px;
+    font-weight: 300;
+    line-height: 85px;
+  }
+
+  &__title-note {
+    margin-bottom: 2.34vw;
+    font-size: 32px;
+    line-height: 39px;
   }
 
   &__title-note-svg {
@@ -13,6 +36,28 @@
   &__info-links,
   &__info-link {
     @extend %flex-center;
+  }
+
+  &__info-link {
+    max-width: 19.5vw;
+    height: 5.2vw;
+    padding: 27px 40px 29px 53px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    border-radius: 500px;
+
+    &_green {
+      margin-right: 0.94vw;
+      background-color: $mainGreenColor;
+    }
+
+    &_orange {
+      background-color: $mainOrangeColor;
+    }
   }
 
   &__info-link-svg {
@@ -27,5 +72,20 @@
   &__info-note-svg {
     width: 26px;
     height: 20.29px;
+  }
+}
+
+.bullets {
+  border-radius: 20px;
+
+  &__item {
+    padding: 18px 0;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 25px;
+    box-shadow: 0px 22px 25px -18px rgba(0, 0, 0, 0.05);
   }
 }

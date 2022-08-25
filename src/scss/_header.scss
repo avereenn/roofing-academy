@@ -3,22 +3,105 @@
 
 .header {
   &__bottom {
+    @extend %flex-start;
+
+    &>*:nth-child(-n+2) {
+      margin-right: 5.81vw;
+    }
+  }
+
+  &__info {
+    max-width: 10.7vw;
+    padding-top: .89vw;
+    font-size: .63vw;
+    line-height: 1.04vw;
+    text-align: center;
+
+    &-top {
+      margin-bottom: .42vw;
+    }
+  }
+
+  &__pdf {
+    margin-top: 2.19vw;
+  }
+
+  &__title {
+    width: 14.27vw;
+    height: auto;
+  }
+
+  &__sotial {
     @extend %flex-center;
+    flex-direction: column;
+    margin-top: 1.4vw;
+    margin-left: 6.46vw;
+    text-align: center;
+  }
+
+  &__sotial-label {
+    @extend %flex-center;
+    font-weight: 400;
+    font-size: .63vw;
+    line-height: .78vw;
+    text-align: center;
+    letter-spacing: 0.02em;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: .2vw;
+      height: .2vw;
+      margin-right: .2vw;
+      border-radius: 50%;
+      background-color: $mainGreenColor;
+      vertical-align: middle;
+    }
   }
 
   &__sotial-list {
     @extend %flex-center;
+    margin-top: .78vw;
+  }
+
+  &__sotial-item:not(:last-child) {
+    margin-right: .74vw;
   }
 
   &__sotial-svg {
-    width: 43.85px;
-    height: 43.85px;
+    width: 2.28vw;
+    height: 2.28vw;
+  }
+
+  &__contact-info {
+    margin-left: auto;
   }
 }
 
 .nav {
+  padding-top: 2.24vw;
+  padding-bottom: 1.93vw;
+  border-bottom: 1px solid #efefef;
+
   &__list {
-    @extend %flex-center;
+    @extend %flex-start;
+    padding-right: .83vw;
+  }
+
+  &__item:not(:first-child) {
+    padding: 0 10px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: auto;
+  }
+
+  &__link {
+    font-size: 1.2vw;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+    text-transform: uppercase;
   }
 
   &__home-svg {
@@ -27,8 +110,75 @@
   }
 }
 
+.pdf-link {
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    display: flex;
+    width: 43.85px;
+    height: 43.85px;
+    margin-right: 17px;
+    color: #12C868;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 13px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+
+    &::before {
+      content: 'pdf';
+      margin: auto;
+    }
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: .63vw;
+    line-height: .78vw;
+    text-align: center;
+    letter-spacing: 0.04em;
+    border-bottom: 2px dotted $mainGreenColor;
+  }
+}
+
 .burger {
   display: none;
+}
+
+.contact-info {
+  margin-top: 27px;
+  padding-right: .63vw;
+  padding-left: .63vw;
+
+  @extend %flex-center;
+  flex-direction: column;
+
+  &__mode {
+    font-weight: 400;
+    font-size: .63vw;
+    line-height: .78vw;
+    letter-spacing: 0.02em;
+  }
+
+  &__tel-link {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 41px;
+    letter-spacing: 0.05em;
+  }
+
+  &__feedback-link {
+    color: $mainGreenColor;
+    font-weight: 600;
+    font-size: .63vw;
+    line-height: .78vw;
+    letter-spacing: 0.04em;
+    border-bottom: 2px dotted $mainGreenColor;
+  }
 }
 
 .feedback-form {

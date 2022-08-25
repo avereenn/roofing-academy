@@ -1,3 +1,13 @@
+@mixin fontFace($family, $src, $weight) {
+  @font-face {
+    font-family: $family;
+    src: $src;
+    font-weight: $weight;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+
 @mixin hide {
   opacity: 0;
   visibility: hidden;

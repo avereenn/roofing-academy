@@ -3,6 +3,11 @@
   align-items: center;
 }
 
+%flex-start {
+  display: flex;
+  align-items: flex-start;
+}
+
 %reset-list-style {
   margin-top: 0;
   margin-bottom: 0;
@@ -20,3 +25,15 @@
   background-color: transparent;
   border: none;
 }
+
+$mainGreenColor: #12c868;
+$mainOrangeColor: #f38120;
+
+$mainFont: 'Montserrat';
+$fontFaces: (
+    300: #{url(./fonts/montserrat-light.woff2) format('woff2')},
+    400: #{url(./fonts/montserrat-regular.woff2) format('woff2')},
+    500: #{url(./fonts/montserrat-medium.woff2) format('woff2')},
+    600: #{url(./fonts/montserrat-semibold.woff2) format('woff2')},
+    700: #{url(./fonts/montserrat-bold.woff2) format('woff2')}
+);

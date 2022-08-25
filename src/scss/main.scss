@@ -1,4 +1,15 @@
 @import 'mixins';
+@import 'vars';
+
+@each $weight, $src in $fontFaces {
+  @font-face {
+    font-family: $mainFont;
+    src: $src;
+    font-weight: $weight;
+    font-style: normal;
+    font-display: swap;
+  }
+}
 
 html {
   box-sizing: border-box;
@@ -12,7 +23,7 @@ body {
   margin: 0;
   min-width: 320px;
   color: #333;
-  font: normal 16px/32px 'Montserrat', sans-serif;
+  font: normal 16px/1 $mainFont,  sans-serif;
   @include setBgImage(url('images/roof-desktop.webp'));
 
   @media(max-width: 992px) {
@@ -43,6 +54,10 @@ a {
 
 a:focus-visible {
   outline: none;
+}
+
+b {
+  font-weight: 600;
 }
 
 p {
@@ -93,12 +108,12 @@ svg {
 }
 
 .container {
-  width: 100%;
+  width: 100vw;
   max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 175px;
-  padding-right: 175px;
+  padding-left: 9.12vw;
+  padding-right: 9.12vw;
 }
 
 @import 'header';
