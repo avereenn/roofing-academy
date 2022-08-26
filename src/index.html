@@ -6,13 +6,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Академия кровли</title>
+  <link rel="preload" href="fonts/montserrat-light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/montserrat-medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/montserrat-semibold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/montserrat-bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 
 <body>
   <header class="header container">
-    <div id="headerMenu" class="header__menu">
+    <div id="headerMenu" class="header__menu js-menu">
       <nav class="header__nav nav">
         <ul class="nav__list">
           <li class="nav__item">
@@ -61,13 +66,13 @@
       </nav>
     </div>
     <div class="header__bottom">
-      <div class="header__info">
+      <div class="header__info" data-adaptive="600 .js-menu">
         <p class="header__info-top">
           <b>Кровельные и фасадные материалы</b> в Тюмени и области.
         </p>
         Профессиональный монтаж с&nbsp;2010 года.
       </div>
-      <span class="header__pdf">
+      <span class="header__pdf" data-adaptive="600 .js-menu">
         <a class="header__pdf-link pdf-link" href="#" download>
           <span class="pdf-link__icon"></span>
           <span class="pdf-link__text">Скачать прайс-каталог</span>
@@ -103,11 +108,11 @@
           </defs>
         </svg>
       </h1>
-      <button class="header__burger burger" type="button" aria-label="открыть меню" aria-controls="headerMenu"
+      <button class="header__burger burger js-burger" type="button" aria-label="открыть меню" aria-controls="headerMenu"
         aria-expanded="false">
         <span class="burger__line"></span>
       </button>
-      <div class="header__sotial">
+      <div class="header__sotial" data-adaptive="600 .js-menu">
         <span class="header__sotial-label">Отвечаем&nbsp;<b>онлайн</b></span>
         <ul class="header__sotial-list">
           <li class="header__sotial-item">
@@ -204,13 +209,17 @@
         </div>
         <div class="hero__info-links">
           <a class="hero__info-link hero__info-link_green" href="#">
-            Рассчитать стоимость материалов и монтажа
+            <span class="hero__info-link-text">
+              Рассчитать стоимость материалов и монтажа
+            </span>
             <svg class="hero__info-link-svg">
               <use xlink:href="images/sprite.svg#arrow" />
             </svg>
           </a>
           <a class="hero__info-link hero__info-link_orange" href="#">
-            Записаться на просмотр объектов
+            <span class="hero__info-link-text">
+              Записаться на просмотр объектов
+            </span>
             <svg class="hero__info-link-svg">
               <use xlink:href="images/sprite.svg#arrow" />
             </svg>
@@ -220,7 +229,9 @@
           <svg class="hero__info-note-svg">
             <use xlink:href="images/sprite.svg#cursor" />
           </svg>
-          Ответьте на несколько вопросов и получите сметную стоимость и 3 подарка за экономию нашего времени
+          <span class="hero__info-note-text">
+            <b>Ответьте на несколько вопросов и получите</b> сметную стоимость и 3 подарка за экономию нашего времени
+          </span>
         </div>
       </div>
     </section>

@@ -1,6 +1,10 @@
 .hero {
-  @extend %flex-center;
+  @extend %flex-start;
   padding-bottom: 7.89vw;
+
+  @media(max-width: 992px) {
+    padding-bottom: 76px;
+  }
 
   &__bullets {
     width: 11.7vw;
@@ -8,29 +12,64 @@
     padding: 2.19vw 1.56vw;
     text-align: center;
     background-color: #fff;
+
+    @media(max-width: 992px) {
+      width: 112px;
+      margin-right: 36px;
+      padding: 21px 15px;
+    }
   }
 
   &__bullets-btn {
     display: none;
   }
 
+  &__info {
+    padding-top: 1.9vw;
+
+    @media(max-width: 992px) {
+      padding-top: 18px;
+    }
+  }
+
   &__title {
     max-width: 33.6vw;
-    margin-bottom: .99vw;
+    margin-bottom: .9vw;
     font-size: 2.86vw;
     font-weight: 300;
     line-height: 4.43vw;
+
+    @media(max-width: 992px) {
+     max-width: 323px;
+     margin-bottom: 9px;
+     font-size: 27px;
+     line-height: 42px;
+    }
   }
 
   &__title-note {
-    margin-bottom: 2.34vw;
+    @extend %flex-center;
+    margin-bottom: 2.3vw;
+    padding-left: .83vw;
     font-size: 1.67vw;
     line-height: 2.03vw;
+
+    @media(max-width: 992px) {
+      margin-bottom: 22px;
+      padding-left: 8px;
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
 
   &__title-note-svg {
     width: 3.02vw;
     height: .48vw;
+
+    @media(max-width: 992px) {
+      width: 29px;
+      height: 4.6px;
+    }
   }
 
   &__info-links,
@@ -38,40 +77,108 @@
     @extend %flex-center;
   }
 
+  &__info-links {
+    margin-bottom: 2vw;
+
+    @media(max-width: 992px) {
+      margin-bottom: 19px;
+    }
+  }
+
   &__info-link {
-    max-width: 19.5vw;
     height: 5.2vw;
-    padding: 1.4vw 2.08vw 1.51vw 2.76vw;
     color: #fff;
     font-weight: 600;
     font-size: .73vw;
     line-height: 1.15vw;
     text-align: center;
+    text-transform: uppercase;
     letter-spacing: 0.02em;
     border-radius: 500px;
 
+    @media(max-width: 992px) {
+      height: 50px;
+      font-size: 7px;
+      line-height: 11px;
+    }
+
     &_green {
+      max-width: 19.5vw;
       margin-right: 0.94vw;
+      padding: 1.2vw 3vw 1.51vw 2.2vw;
       background-color: $mainGreenColor;
+
+      @media(max-width: 992px) {
+        max-width: 187px;
+        margin-right: 9px;
+        padding: 11.5px 29px 14.5px 21px;
+      }
     }
 
     &_orange {
+      max-width: 17.45vw;
+      padding: 1.2vw 2.4vw 1.51vw 2.4vw;
       background-color: $mainOrangeColor;
+
+      @media(max-width: 992px) {
+        max-width: 167.5px;
+        padding: 11.5px 23px 14.5px 23px;
+      }
+    }
+  }
+
+  &__info-link-text {
+    margin-right: 1.04vw;
+
+    @media(max-width: 992px) {
+      margin-right: 10px;
     }
   }
 
   &__info-link-svg {
+    flex: 1 0 1.04vw;
     width: 1.04vw;
     height: 1.04vw;
+
+    @media(max-width: 992px) {
+      flex: 1 0 20px;
+      width: 20px;
+      height: 20px;
+    }
   }
 
   &__info-note {
-    @extend %flex-center;
+    @extend %flex-start;
+    max-width: 15.2vw;
+    font-size: .73vw;
+    line-height: 1.15vw;
+
+    @media(max-width: 992px) {
+      max-width: 141px;
+      font-size: 7px;
+      line-height: 1.5;
+    }
   }
 
   &__info-note-svg {
+    flex: 1 0 1.35vw;
     width: 1.35vw;
     height: 1.06vw;
+
+    @media(max-width: 992px) {
+     flex: 1 0 13px;
+     width: 13px;
+     height: 10px;
+    }
+  }
+
+  &__info-note-text {
+    padding: 0 .83vw .83vw;
+    text-align: center;
+
+    @media(max-width: 992px) {
+      padding: 0 8px 8px;
+    }
   }
 }
 
@@ -82,10 +189,21 @@
     padding: 0.94vw 0;
     font-size: .73vw;
     line-height: 1.15vw;
+
+    @media(max-width: 992px) {
+      padding: 9px 0;
+      font-size: 7px;
+      line-height: 1.5;
+    }
   }
 
   &__item:not(:last-child) {
-    margin-bottom: 1.3vw;
+    margin-bottom: 1vw;
     box-shadow: 0 1.15vw 1.3vw -.94vw rgba(0, 0, 0, 0.05);
+
+    @media(max-width: 992px) {
+      margin-bottom: 19px;
+      box-shadow: 0 11px 12.5px -9px rgba(0, 0, 0, 0.05);
+    }
   }
 }

@@ -53,7 +53,7 @@ function buildScripts() {
       presets: ['@babel/env']
     }))
     .pipe(concat('script.js'))
-    .pipe(uglify().on('error', notify.onError()))
+    // .pipe(uglify().on('error', notify.onError()))
     .pipe(sourcemaps.write())
     .pipe(dest(OUTPUT_DIR))
     .pipe(browserSync.stream());

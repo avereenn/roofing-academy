@@ -23,10 +23,10 @@ body {
   margin: 0;
   min-width: 320px;
   color: #333;
-  font: normal 16px/1 $mainFont,  sans-serif;
+  font: normal .73vw/1 $mainFont,  sans-serif;
   @include setBgImage(url('images/roof-desktop.webp'));
 
-  @media(max-width: 992px) {
+  @media(max-width: 600px) {
     @include setBgImage(url('images/roof-mobile.webp'));
   }
 }
@@ -108,12 +108,16 @@ svg {
 }
 
 .container {
-  width: 100vw;
   max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
   padding-left: $desktopContainerPadding;
   padding-right: $desktopContainerPadding;
+
+  @media(max-width: 992px) {
+    padding-left: $containerPadding992;
+    padding-right: $containerPadding992;
+  }
 }
 
 @import 'header';

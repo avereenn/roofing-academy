@@ -7,6 +7,10 @@
 
     &>*:nth-child(-n+2) {
       margin-right: 5.81vw;
+
+      @media(max-width: 992px) {
+        margin-right: auto;
+      }
     }
   }
 
@@ -19,16 +23,35 @@
 
     &-top {
       margin-bottom: .42vw;
+
+      @media(max-width: 992px) {
+        margin-bottom: 4px;
+      }
+    }
+
+    @media(max-width: 992px) {
+      max-width: 102px;
+      padding-top: 14px;
+      font-size: 6px;
+      line-height: 1.5;
     }
   }
 
   &__pdf {
     margin-top: 2.19vw;
+
+    @media(max-width: 992px) {
+      margin-top: 21px;
+    }
   }
 
   &__title {
     width: 14.27vw;
     height: auto;
+
+    @media(max-width: 992px) {
+      width: 137px;
+    }
   }
 
   &__sotial {
@@ -37,6 +60,11 @@
     margin-top: 1.4vw;
     margin-left: 6.46vw;
     text-align: center;
+
+    @media(max-width: 992px) {
+      margin-top: 13px;
+      margin-left: auto;
+    }
   }
 
   &__sotial-label {
@@ -57,20 +85,44 @@
       background-color: $mainGreenColor;
       vertical-align: middle;
     }
+
+    @media(max-width: 992px) {
+      font-size: 6px;
+      line-height: 1.5;
+
+      &:before {
+        width: 2px;
+        height: 2px;
+        margin-right: 2px;
+      }
+    }
   }
 
   &__sotial-list {
     @extend %flex-center;
     margin-top: .78vw;
+
+    @media(max-width: 992px) {
+      margin-top: 7.5px;
+    }
   }
 
   &__sotial-item:not(:last-child) {
     margin-right: .74vw;
+
+    @media(max-width: 992px) {
+      margin-right: 7px;
+    }
   }
 
   &__sotial-svg {
     width: 2.28vw;
     height: 2.28vw;
+
+    @media(max-width: 992px) {
+      width: 22px;
+      height: 22px;
+    }
   }
 
   &__contact-info {
@@ -83,13 +135,26 @@
   padding-bottom: 1.93vw;
   border-bottom: 1px solid #efefef;
 
+  @media(max-width: 992px) {
+    padding-top: 21px;
+    padding-bottom: 18px;
+  }
+
   &__list {
     @extend %flex-start;
     padding-right: .83vw;
+
+    @media(max-width: 992px) {
+      padding-right: 8px;
+    }
   }
 
   &__item:not(:first-child) {
     padding: 0 .52vw;
+
+    @media(max-width: 992px) {
+      padding: 0 5px;
+    }
   }
 
   &__item:not(:last-child) {
@@ -97,29 +162,38 @@
   }
 
   &__link {
-    font-size: 1.2vw;
+    font-size: .73vw;
     line-height: 1.35vw;
     letter-spacing: 0.05em;
     font-weight: 500;
     text-transform: uppercase;
+
+    @media(max-width: 992px) {
+      font-size: 7px;
+      line-height: 2;
+    }
   }
 
   &__home-svg {
     width: 1.18vw;
     height: 1.15vw;
+
+    @media(max-width: 992px) {
+      width: 11.5px;
+      height: 11px;
+    }
   }
 }
 
 .pdf-link {
-  display: flex;
-  align-items: center;
+  @extend %flex-center;
 
   &__icon {
     display: flex;
     width: 2.28vw;
     height: 2.28vw;
     margin-right: .89vw;
-    color: #12C868;
+    color: $mainGreenColor;
     font-weight: 600;
     font-size: .57vw;
     line-height: .68vw;
@@ -127,11 +201,19 @@
     letter-spacing: 0.04em;
     background-color: #fff;
     border-radius: 50%;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 1.3vw rgba(0, 0, 0, 0.05);
 
     &::before {
       content: 'pdf';
       margin: auto;
+    }
+
+    @media(max-width: 992px) {
+      width: 22px;
+      height: 22px;
+      margin-right: 10px;
+      font-size: 6px;
+      line-height: 1.5;
     }
   }
 
@@ -142,6 +224,11 @@
     text-align: center;
     letter-spacing: 0.04em;
     border-bottom: 2px dotted $mainGreenColor;
+
+    @media(max-width: 992px) {
+      font-size: 6px;
+      line-height: 1.5;
+    }
   }
 }
 
@@ -150,18 +237,28 @@
 }
 
 .contact-info {
+  @extend %flex-center;
+  flex-direction: column;
   margin-top: 1.4vw;
   padding-right: .63vw;
   padding-left: .63vw;
 
-  @extend %flex-center;
-  flex-direction: column;
+  @media(max-width: 992px) {
+    margin-top: 14px;
+    padding-right: 6px;
+    padding-left: 6px;
+  }
 
   &__mode {
     font-weight: 400;
     font-size: .63vw;
     line-height: .78vw;
     letter-spacing: 0.02em;
+
+    @media(max-width: 992px) {
+      font-size: 6px;
+      line-height: 1.5;
+    }
   }
 
   &__tel-link {
@@ -169,6 +266,11 @@
     font-size: 1.15vw;
     line-height: 2.14vw;
     letter-spacing: 0.05em;
+
+    @media(max-width: 992px) {
+      font-size: 11px;
+      line-height: 2;
+    }
   }
 
   &__feedback-link {
@@ -178,6 +280,11 @@
     line-height: .78vw;
     letter-spacing: 0.04em;
     border-bottom: 2px dotted $mainGreenColor;
+
+    @media(max-width: 992px) {
+      font-size: 6px;
+      line-height: 1.5;
+    }
   }
 }
 
