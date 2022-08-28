@@ -1,5 +1,8 @@
 const { src, dest, series, watch } = require('gulp');
 const sourcemaps = require('gulp-sourcemaps');
+const htmlMin = require('gulp-htmlmin');
+const cssMin = require('gulp-cssmin');
+const autoprefixer = require('gulp-autoprefixer');
 const rename = require('gulp-rename');
 const sass = require('gulp-sass')(require('sass'));
 const babel = require('gulp-babel');
@@ -28,7 +31,9 @@ const OUTPUT_DIR = 'public';
 
 function buildHtml() {
   return src(paths.html)
-    .pipe(dest(OUTPUT_DIR));
+    .pipe(htmlMin({ collapseWhitespace: true }))
+    .pipe(dest(OUTPUT_DIR))
+    .pipe(browserSync.stream());
 }
 
 function fonts() {
@@ -40,6 +45,10 @@ function buildStyles() {
   return src(paths.scss)
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer({
+      cascade: false
+    }))
+    .pipe(cssMin())
     .pipe(rename('style.css'))
     .pipe(sourcemaps.write())
     .pipe(dest(OUTPUT_DIR))
@@ -53,7 +62,7 @@ function buildScripts() {
       presets: ['@babel/env']
     }))
     .pipe(concat('script.js'))
-    // .pipe(uglify().on('error', notify.onError()))
+    .pipe(uglify().on('error', notify.onError()))
     .pipe(sourcemaps.write())
     .pipe(dest(OUTPUT_DIR))
     .pipe(browserSync.stream());
@@ -102,4 +111,4 @@ exports.svg = buildSvgSprite;
 exports.images = compessImages;
 exports.styles = buildStyles;
 exports.scripts = buildScripts;
-exports.default = series( cleanDist, fonts, buildHtml, buildStyles, buildScripts, buildSvgSprite, compessImages, watchFiles);
+exports.default = series(cleanDist, fonts, buildHtml, buildStyles, buildScripts, buildSvgSprite, compessImages, watchFiles);

@@ -3,7 +3,7 @@
 
 @each $weight, $src in $fontFaces {
   @font-face {
-    font-family: $mainFont;
+    font-family: $mainFontFamily;
     src: $src;
     font-weight: $weight;
     font-style: normal;
@@ -22,12 +22,13 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  color: #333;
-  font: normal .73vw/1 $mainFont,  sans-serif;
+  color: $mainFontColor;
+  font: normal .73vw/1 $mainFontFamily,  sans-serif;
+  background-color: $mainBgColor;
   @include setBgImage(url('images/roof-desktop.webp'));
 
   @media(max-width: 600px) {
-    @include setBgImage(url('images/roof-mobile.webp'));
+    @include setBgImage(url('images/roof-mobile.webp'), right bottom);
   }
 }
 
@@ -117,6 +118,11 @@ svg {
   @media(max-width: 992px) {
     padding-left: $containerPadding992;
     padding-right: $containerPadding992;
+  }
+
+  @media(max-width: 600px) {
+    padding-left: $mobileContainerPadding;
+    padding-right: $mobileContainerPadding;
   }
 }
 

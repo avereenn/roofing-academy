@@ -12,6 +12,7 @@
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
+  font-family: inherit;
   list-style: none;
 }
 
@@ -26,12 +27,17 @@
   border: none;
 }
 
+$mainFontColor: #1c1c1c;
+$mainBgColor: #edf2f5;
 $mainGreenColor: #12c868;
 $mainOrangeColor: #f38120;
+$hoverOrangeColor: #fd9c49;
+$hoverGreenColor: #21e27c;
 $desktopContainerPadding: 9.12vw;
 $containerPadding992: 60px;
+$mobileContainerPadding: 22px;
 
-$mainFont: 'Montserrat';
+$mainFontFamily: 'Montserrat';
 $fontFaces: (
     300: #{url(./fonts/montserrat-light.woff2) format('woff2')},
     400: #{url(./fonts/montserrat-regular.woff2) format('woff2')},
