@@ -19,232 +19,241 @@
 </head>
 
 <body>
-  <header class="header container">
-    <div id="headerMenu" class="header__menu js-menu">
-      <nav class="header__nav nav">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a class="nav__link" href="#" aria-label="главная страница">
-              <svg class="nav__home-svg">
-                <use xlink:href="images/sprite.svg#home" />
-              </svg>
-            </a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#">
-              Каталог
-            </a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#">
-              Преимущества
-            </a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#">
-              Примеры работ
-            </a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#">
-              Монтаж
-            </a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#">
-              Отзывы
-            </a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#">
-              Ответы на вопросы
-            </a>
-          </li>
-          <li class="nav__item nav__item_contacts">
-            <a class="nav__link" href="#">
-              Контакты
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <div class="header__bottom">
-      <div class="header__info" data-adaptive="600 .js-menu">
-        <p class="header__info-top">
-          <b>Кровельные и фасадные материалы</b> в Тюмени и области.
-        </p>
-        Профессиональный монтаж с&nbsp;2010 года.
-      </div>
-      <div class="header__pdf" data-adaptive="600 .js-menu">
-        <a class="header__pdf-link pdf-link" href="#" download>
-          <span class="pdf-link__icon"></span>
-          <span class="pdf-link__text">Скачать прайс-каталог</span>
-        </a>
-      </div>
-      <h1 class="header__title">
-        <picture>
-          <source media="(min-width: 600px)" srcset="images/logo-desktop.webp">
-          <source media="(max-width: 600px)" srcset="images/logo-mobile.webp">
-          <img class="header__title-img" src="images/logo-desktop.webp" alt="кадемия кровли">
-        </picture>
-      </h1>
-      <button class="header__burger burger js-burger" type="button" aria-label="открыть меню" aria-controls="headerMenu"
-        aria-expanded="false">
-        <span class="burger__line"></span>
-      </button>
-      <div class="header__sotial" data-adaptive="600 .js-menu">
-        <span class="header__sotial-label">Отвечаем&nbsp;<b>онлайн</b></span>
-        <ul class="header__sotial-list">
-          <li class="header__sotial-item">
-            <a class="header__sotial-link" href="https://viber://chat?number=79999999999" target="_blank" aria-label="связаться через вайбер">
-              <svg class="header__sotial-svg">
-                <use xlink:href="images/sprite.svg#viber" />
-              </svg>
-            </a>
-          </li>
-          <li class="header__sotial-item">
-            <a class="header__sotial-link" href="https://wa.me/+79999999999" target="_blank"
-              aria-label="связаться через вотсап">
-              <svg class="header__sotial-svg">
-                <use xlink:href="images/sprite.svg#whatsapp" />
-              </svg>
-            </a>
-          </li>
-          <li class="header__sotial-item">
-            <a class="header__sotial-link" href="https://t.me/username" target="_blank" aria-label="связаться через телеграмм">
-              <svg class="header__sotial-svg">
-                <use xlink:href="images/sprite.svg#tg" />
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="header__contact-info contact-info">
-        <div class="contact-info__mode">
-          <b>Пн-Пт</b> 9:00 - 18:00, <b>Сб</b> 10:00 - 18:00
-        </div>
-        <a class="contact-info__tel-link" href="tel:+7800225460">8&nbsp;(800)&nbsp;222&#8209;54&#8209;60</a>
-        <a class="contact-info__feedback-link js-feedback-link" href="#feedbackForm" aria-controls="feedbackForm"
-          aria-expanded="false">Позвоните мне</a>
-        <form id="feedbackForm" class="contact-info__feedback-form feedback-form js-feedback-form" name="feedbackForm"
-          action="#">
-          <button class="feedback-form__close js-form-close" type="button" aria-label="закрыть форму обратной связи"
-            aria-controls="feedbackForm">
-            <svg class="feedback-form__close-svg">
-              <use xlink:href="images/sprite.svg#close" />
-            </svg>
-          </button>
-          <h2 class="feedback-form__title">
-            Быстро оставить заявку
-          </h2>
-          <div class="feedback-form__text">
-            Введите номер, мы позвоним вам в течение 10 минут в рабочее время
-          </div>
-          <span class="feedback-form__mode">
-            Пн–Пт 9:00 - 18:00, Сб 10:00 - 18:00
-          </span>
-          <label class="feedback-form__label">
-            <span class="feedback-form__label-text">Введите номер телефона</span>
-              <input
-                id="phone-number"
-                class="feedback-form__input js-feedback-input"
-                placeholder="+7(___)___-__-__"
-                required type="tel" name="phone-number"
-              >
-          </label>
-          <button class="feedback-form__submit" type="submit">
-            Позвоните мне
-            <svg class="feedback-form__submit-svg">
-              <use xlink:href="images/sprite.svg#arrow" />
-            </svg>
-          </button>
-          <div class="feedback-form__wrapper">
-            <label class="feedback-form__label-policy" for="policy-confirm">
-              <input class="feedback-form__checkbox" required type="checkbox" name="policy-confirm" id="policy-confirm">
-              <svg class="feedback-form__fake-check fake-check" width="18" height="18" viewBox="0 0 18 18" fill="#F38120"
-                xmlns="http://www.w3.org/2000/svg">
-                <rect width="18" height="17.6456" rx="4" fill="inherit" />
-                <path class="fake-check__check"
-                  d="M12.4731 6.90759L11.8387 6.29889C11.7531 6.21682 11.6462 6.17578 11.525 6.17578C11.4038 6.17578 11.2969 6.21682 11.2113 6.29889L8.16024 9.22614L6.79866 7.91298C6.71311 7.83091 6.60618 7.78987 6.48499 7.78987C6.3638 7.78987 6.25687 7.83091 6.17133 7.91298L5.53687 8.52169C5.4442 8.60376 5.40143 8.70635 5.40143 8.82262C5.40143 8.93889 5.4442 9.04148 5.52975 9.12355L7.21212 10.7376L7.84658 11.3464C7.93212 11.4284 8.03905 11.4695 8.16024 11.4695C8.28143 11.4695 8.38836 11.4284 8.4739 11.3464L9.10836 10.7376L12.4731 7.50946C12.5587 7.42739 12.6014 7.3248 12.6014 7.20853C12.6014 7.09226 12.5587 6.98967 12.4731 6.90759Z"
-                  fill="white" />
-              </svg>
-              <span class="feedback-form__policy-text">
-                Нажимая кнопку вы соглашаетесь с условиями
-                <a class="feedback-form__policy-link" href="#">Политики конфиденциальности</a>
-              </span>
-            </label>
-          </div>
-        </form>
-      </div>
-    </div>
-  </header>
-  <main class="container">
-    <section class="hero">
-      <div id="bullets" class="hero__bullets bullets">
-        <div class="bullets__wrapper">
-          <ul class="bullets__list">
-            <li class="bullets__item js-first-bullet">
-              <b>Гарантия от 50 лет</b> на материалы и 5 лет на монтаж
+  <div class="site">
+    <header class="header container">
+      <div id="headerMenu" class="header__menu js-menu">
+        <nav class="header__nav nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="#" aria-label="главная страница">
+                <svg class="nav__home-svg">
+                  <use xlink:href="images/sprite.svg#home" />
+                </svg>
+              </a>
             </li>
-            <li class="bullets__item">
-              <b>Замер, монтажный проект</b> и еще 4 услуги бесплатно
+            <li class="nav__item">
+              <a class="nav__link" href="#">
+                Каталог
+              </a>
             </li>
-            <li class="bullets__item">
-              <b>Сметы точны</b> до копейки
+            <li class="nav__item">
+              <a class="nav__link" href="#">
+                Преимущества
+              </a>
             </li>
-            <li class="bullets__item">
-              <b>Поэтапная оплата,</b> кредит или рассрочка
+            <li class="nav__item">
+              <a class="nav__link" href="#">
+                Примеры работ
+              </a>
             </li>
-            <li class="bullets__item">
-              <b>Наши крыши в каждом поселке</b> и дачном сообществе региона
+            <li class="nav__item">
+              <a class="nav__link" href="#">
+                Монтаж
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">
+                Отзывы
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">
+                Ответы на вопросы
+              </a>
+            </li>
+            <li class="nav__item nav__item_contacts">
+              <a class="nav__link" href="#">
+                Контакты
+              </a>
             </li>
           </ul>
-          <button class="bullets__btn js-bullets-btn" aria-label="показать все преимущества" aria-controls="bullets"
-            aria-expanded="false">
-            <span class="bullets__btn-cross"></span>
-          </button>
-        </div>
+        </nav>
       </div>
-      <div class="hero__info">
-        <h2 class="hero__title">
-          Продажа <b>кровельных материалов</b> в Тюмени и Тюменской области
-        </h2>
-        <div class="hero__title-note">
-          <svg class="hero__title-note-svg">
-            <use xlink:href="images/sprite.svg#circles" />
-          </svg>
-          и монтаж под ключ
+      <div class="header__bottom">
+        <div class="header__info" data-adaptive="600 .js-menu">
+          <p class="header__info-top">
+            <b>Кровельные и фасадные материалы</b> в Тюмени и области.
+          </p>
+          Профессиональный монтаж с&nbsp;2010 года.
         </div>
-        <div class="hero__info-links">
-          <a class="hero__info-link hero__info-link_green" href="#">
-            <span class="hero__info-link-text">
-              Рассчитать стоимость материалов и монтажа
-            </span>
-            <svg class="hero__info-link-svg">
-              <use xlink:href="images/sprite.svg#arrow" />
-            </svg>
-          </a>
-          <a class="hero__info-link hero__info-link_orange" href="#">
-            <span class="hero__info-link-text">
-              Записаться на просмотр объектов
-            </span>
-            <svg class="hero__info-link-svg">
-              <use xlink:href="images/sprite.svg#arrow" />
-            </svg>
+        <div class="header__pdf" data-adaptive="600 .js-menu">
+          <a class="header__pdf-link pdf-link" href="#" download>
+            <span class="pdf-link__icon"></span>
+            <span class="pdf-link__text">Скачать прайс-каталог</span>
           </a>
         </div>
-        <div class="hero__info-note">
-          <svg class="hero__info-note-svg">
-            <use xlink:href="images/sprite.svg#cursor" />
-          </svg>
-          <span class="hero__info-note-text">
-            <b>Ответьте на несколько вопросов и&nbsp;получите</b> сметную стоимость и 3 подарка за экономию нашего
-            времени
-          </span>
+        <h1 class="header__title">
+          <picture>
+            <source media="(min-width: 600px)" srcset="images/logo-desktop.webp">
+            <source media="(max-width: 600px)" srcset="images/logo-mobile.webp">
+            <img class="header__title-img" src="images/logo-desktop.webp" alt="кадемия кровли">
+          </picture>
+        </h1>
+        <button class="header__burger burger js-burger" type="button" aria-label="открыть меню"
+          aria-controls="headerMenu" aria-expanded="false">
+          <span class="burger__line"></span>
+        </button>
+        <div class="header__sotial" data-adaptive="600 .js-menu">
+          <span class="header__sotial-label">Отвечаем&nbsp;<b>онлайн</b></span>
+          <ul class="header__sotial-list">
+            <li class="header__sotial-item">
+              <a class="header__sotial-link" href="https://viber://chat?number=79999999999" target="_blank"
+                aria-label="связаться через вайбер">
+                <svg class="header__sotial-svg">
+                  <use xlink:href="images/sprite.svg#viber" />
+                </svg>
+              </a>
+            </li>
+            <li class="header__sotial-item">
+              <a class="header__sotial-link" href="https://wa.me/+79999999999" target="_blank"
+                aria-label="связаться через вотсап">
+                <svg class="header__sotial-svg">
+                  <use xlink:href="images/sprite.svg#whatsapp" />
+                </svg>
+              </a>
+            </li>
+            <li class="header__sotial-item">
+              <a class="header__sotial-link" href="https://t.me/username" target="_blank"
+                aria-label="связаться через телеграмм">
+                <svg class="header__sotial-svg">
+                  <use xlink:href="images/sprite.svg#tg" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="header__contact-info contact-info">
+          <div class="contact-info__mode">
+            <b>Пн-Пт</b> 9:00 - 18:00, <b>Сб</b> 10:00 - 18:00
+          </div>
+          <a class="contact-info__tel-link" href="tel:+7800225460">8&nbsp;(800)&nbsp;222&#8209;54&#8209;60</a>
+          <a class="contact-info__feedback-link js-feedback-link" href="#feedbackForm" aria-controls="feedbackForm"
+            aria-expanded="false">Позвоните мне</a>
+          <form id="feedbackForm" class="contact-info__feedback-form feedback-form js-feedback-form" name="feedbackForm"
+            action="#">
+            <button class="feedback-form__close js-form-close" type="button" aria-label="закрыть форму обратной связи"
+              aria-controls="feedbackForm">
+              <svg class="feedback-form__close-svg">
+                <use xlink:href="images/sprite.svg#close" />
+              </svg>
+            </button>
+            <h2 class="feedback-form__title">
+              Быстро оставить заявку
+            </h2>
+            <div class="feedback-form__text">
+              Введите номер, мы позвоним вам в течение 10 минут в рабочее время
+            </div>
+            <span class="feedback-form__mode">
+              Пн–Пт 9:00 - 18:00, Сб 10:00 - 18:00
+            </span>
+            <label class="feedback-form__label">
+              <span class="feedback-form__label-text">Введите номер телефона</span>
+              <input id="phone-number" class="feedback-form__input js-feedback-input" placeholder="+7(___)___-__-__"
+                required type="tel" name="phone-number">
+            </label>
+            <button class="feedback-form__submit" type="submit">
+              Позвоните мне
+              <svg class="feedback-form__submit-svg">
+                <use xlink:href="images/sprite.svg#arrow" />
+              </svg>
+            </button>
+            <div class="feedback-form__wrapper">
+              <label class="feedback-form__label-policy" for="policy-confirm">
+                <input class="feedback-form__checkbox" required type="checkbox" name="policy-confirm"
+                  id="policy-confirm">
+                <svg class="feedback-form__fake-check fake-check" width="18" height="18" viewBox="0 0 18 18"
+                  fill="#F38120" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="18" height="17.6456" rx="4" fill="inherit" />
+                  <path class="fake-check__check"
+                    d="M12.4731 6.90759L11.8387 6.29889C11.7531 6.21682 11.6462 6.17578 11.525 6.17578C11.4038 6.17578 11.2969 6.21682 11.2113 6.29889L8.16024 9.22614L6.79866 7.91298C6.71311 7.83091 6.60618 7.78987 6.48499 7.78987C6.3638 7.78987 6.25687 7.83091 6.17133 7.91298L5.53687 8.52169C5.4442 8.60376 5.40143 8.70635 5.40143 8.82262C5.40143 8.93889 5.4442 9.04148 5.52975 9.12355L7.21212 10.7376L7.84658 11.3464C7.93212 11.4284 8.03905 11.4695 8.16024 11.4695C8.28143 11.4695 8.38836 11.4284 8.4739 11.3464L9.10836 10.7376L12.4731 7.50946C12.5587 7.42739 12.6014 7.3248 12.6014 7.20853C12.6014 7.09226 12.5587 6.98967 12.4731 6.90759Z"
+                    fill="white" />
+                </svg>
+                <span class="feedback-form__policy-text">
+                  Нажимая кнопку вы соглашаетесь с условиями
+                  <a class="feedback-form__policy-link" href="#">Политики конфиденциальности</a>
+                </span>
+              </label>
+            </div>
+          </form>
+          <div class="contact-info__submit-popup submit-popup js-submit-popup" aria-modal="true" role="dialog">
+            <span class="submit-popup__text js-popup-text"></span>
+            <button class="submit-popup__close js-popup-close">
+              <svg class="submit-popup__close-svg">
+                <use xlink:href="images/sprite.svg#close" />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
-    </section>
-  </main>
+    </header>
+    <main class="container">
+      <section class="hero">
+        <div id="bullets" class="hero__bullets bullets">
+          <div class="bullets__wrapper">
+            <ul class="bullets__list">
+              <li class="bullets__item js-first-bullet">
+                <b>Гарантия от 50 лет</b> на материалы и 5 лет на монтаж
+              </li>
+              <li class="bullets__item">
+                <b>Замер, монтажный проект</b> и еще 4 услуги бесплатно
+              </li>
+              <li class="bullets__item">
+                <b>Сметы точны</b> до копейки
+              </li>
+              <li class="bullets__item">
+                <b>Поэтапная оплата,</b> кредит или рассрочка
+              </li>
+              <li class="bullets__item">
+                <b>Наши крыши в каждом поселке</b> и дачном сообществе региона
+              </li>
+            </ul>
+            <button class="bullets__btn js-bullets-btn" aria-label="показать все преимущества" aria-controls="bullets"
+              aria-expanded="false">
+              <span class="bullets__btn-cross"></span>
+            </button>
+          </div>
+        </div>
+        <div class="hero__info">
+          <h2 class="hero__title">
+            Продажа <b>кровельных материалов</b> в Тюмени и Тюменской области
+          </h2>
+          <div class="hero__title-note">
+            <svg class="hero__title-note-svg">
+              <use xlink:href="images/sprite.svg#circles" />
+            </svg>
+            и монтаж под ключ
+          </div>
+          <div class="hero__info-links">
+            <a class="hero__info-link hero__info-link_green" href="#">
+              <span class="hero__info-link-text">
+                Рассчитать стоимость материалов и монтажа
+              </span>
+              <svg class="hero__info-link-svg">
+                <use xlink:href="images/sprite.svg#arrow" />
+              </svg>
+            </a>
+            <a class="hero__info-link hero__info-link_orange" href="#">
+              <span class="hero__info-link-text">
+                Записаться на просмотр объектов
+              </span>
+              <svg class="hero__info-link-svg">
+                <use xlink:href="images/sprite.svg#arrow" />
+              </svg>
+            </a>
+          </div>
+          <div class="hero__info-note">
+            <svg class="hero__info-note-svg">
+              <use xlink:href="images/sprite.svg#cursor" />
+            </svg>
+            <span class="hero__info-note-text">
+              <b>Ответьте на несколько вопросов и&nbsp;получите</b> сметную стоимость и 3 подарка за экономию нашего
+              времени
+            </span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
 </body>
 
 </html>

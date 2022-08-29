@@ -24,12 +24,6 @@ body {
   min-width: 320px;
   color: $mainFontColor;
   font: normal .73vw/1 $mainFontFamily,  sans-serif;
-  background-color: $mainBgColor;
-  @include setBgImage(url('images/roof-desktop.webp'));
-
-  @media(max-width: 600px) {
-    @include setBgImage(url('images/roof-mobile.webp'), right bottom);
-  }
 }
 
 h1, h2, h3 {
@@ -126,5 +120,31 @@ svg {
   }
 }
 
+.site {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: $mainBgColor;
+  @include setBgImage(url('images/roof-desktop.webp'));
+
+  @media(max-width: 600px) {
+    @include setBgImage(url('images/roof-mobile.webp'), right bottom);
+  }
+
+  &>* {
+    width: 100%;
+  }
+}
+
 @import 'header';
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
 @import 'hero';
